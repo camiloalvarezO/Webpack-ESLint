@@ -37,3 +37,8 @@ module.exports = {
 
 // instalar el plugin de babel para webpack
 # npm i --save-dev babel-loader
+
+// para crear un servidor con webpack dev server
+
+# npm i --save-dev webpack-dev-server
+
