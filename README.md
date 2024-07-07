@@ -38,7 +38,28 @@ module.exports = {
 // instalar el plugin de babel para webpack
 # npm i --save-dev babel-loader
 
-// para crear un servidor con webpack dev server
+// para crear un servidor con webpack dev server debemos configurarlo
 
 # npm i --save-dev webpack-dev-server
+// para correrlo como comando también
+# npx webpack serve
+
+// también podría hacerse de otra forma desde el cli 
+
+# npm install --save-dev webpack-cli webpack-dev-server
+
+ejecutar el servidor de desarrollo en cuestión usando el cli 
+pasando los parámetros desde la línea de comandos:
+# npx webpack serve --static-directory / --compress --port 9000
+
+Este comando usa las siguientes opciones:
+
+--static-directory /: Especifica el directorio estático raíz (equivalente a static.directory en la configuración del servidor).
+--compress: Habilita la compresión gzip.
+--port 9000: Especifica el puerto en el que se ejecutará el servidor.
+
+ Si quieres pasar la configuración de entrada y salida también desde la línea de comandos, puedes hacer algo como esto:
+
+# npx webpack serve --entry ./js/app.js --output-path ./public/js --output-filename bundle.js --static-directory / --compress --port 9000
+
 

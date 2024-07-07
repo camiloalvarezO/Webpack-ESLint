@@ -6,7 +6,8 @@
   "scripts": {
     "babel": "babel entrada.js --out-file salida.js --presets=@babel/preset-env",
     "webpack": "webpack --mode=development",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
