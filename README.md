@@ -63,3 +63,11 @@ Este comando usa las siguientes opciones:
 # npx webpack serve --entry ./js/app.js --output-path ./public/js --output-filename bundle.js --static-directory / --compress --port 9000
 
 
+// para agregar hot reload debemos antes ejecutar el servidor, y luego correr en otra consola el script de 
+"watch": "webpack --watch"
+
+// surge que en este punto toca tener 2 scripts corriendo para hacer el hot reload, pero ¿y si queremos un script que haga eso?
+# npm i --save-dev concurrently
+// se cambia el script de dev por 
+# "dev": "concurrently --kill-others \"npm run watch\" \"npm webpack-dev-server\"",
+para ejecutar los 2 scripts al mismo tiempo, y eliminará los que estén activos para no generar problemas

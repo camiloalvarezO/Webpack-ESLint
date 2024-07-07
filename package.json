@@ -6,7 +6,7 @@
   "scripts": {
     "babel": "babel entrada.js --out-file salida.js --presets=@babel/preset-env",
     "webpack": "webpack --mode=development",
-    "dev": "webpack-dev-server",
+    "dev": "concurrently --kill-others \"npm run watch\" \"npx webpack serve\"",
     "watch": "webpack --watch"
   },
   "repository": {
@@ -24,6 +24,7 @@
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
     "babel-loader": "^9.1.3",
+    "concurrently": "^8.2.2",
     "webpack": "^5.92.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
