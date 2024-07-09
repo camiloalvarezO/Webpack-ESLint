@@ -71,3 +71,10 @@ Este comando usa las siguientes opciones:
 // se cambia el script de dev por 
 # "dev": "concurrently --kill-others \"npm run watch\" \"npm webpack-dev-server\"",
 para ejecutar los 2 scripts al mismo tiempo, y eliminará los que estén activos para no generar problemas
+
+//para agregar eslint
+
+# npm i --save-dev eslint
+para ejecutarlo es con npx
+
+# npx eslint --init
