@@ -78,3 +78,41 @@ para ejecutar los 2 scripts al mismo tiempo, y eliminará los que estén activos
 para ejecutarlo es con npx
 
 # npx eslint --init
+
+si hacemos una configuración en eslint así:√ How would you like to use ESLint? · problems
+√ What type of modules does your project use? · esm
+√ Which framework does your project use? · none
+√ Does your project use TypeScript? · javascript
+√ Where does your code run? · browser
+The config that you've selected requires the following dependencies:
+
+eslint@9.x, globals, @eslint/js
+√ Would you like to install them now? · No / Yes
+√ Which package manager do you want to use? · npm
+☕️Installing...
+
+en este punto tenemos a webpack corriendo en node, osea, usa modulos, y le especificamos que use imports y exports al ser javascript, por lo tanto deberíamos en este punto cambiarlo en el settings.json de el
+IDE presionando ctrl + shift + p y seleccionar settings.json
+
+
+y cambiar el json por esto que ignorará el archivo de webpack que usa node:
+
+   "eslint.options":{
+        "ignorePattern": "webpack.config.js"
+    }
+ quedaría así   
+ {
+    "workbench.colorTheme": "Flatland Monokai",
+    "window.confirmSaveUntitledWorkspace": false,
+    "CodeGPT.apiKey": "Ollama",
+    "CodeGPT.Autocomplete.enabled": true,
+    "workbench.iconTheme": "vscode-icons",
+    "extensions.ignoreRecommendations": true,
+    "eslint.options":{
+        "ignorePattern": "webpack.config.js"
+    }
+}
+
+y para usarlo sería
+
+# npx eslint (nombrearchivo.js) 
