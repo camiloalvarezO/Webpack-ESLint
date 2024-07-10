@@ -116,3 +116,13 @@ y cambiar el json por esto que ignorará el archivo de webpack que usa node:
 y para usarlo sería
 
 # npx eslint (nombrearchivo.js) 
+
+para ejecutar tambien en toda la carpeta sería:
+#npx eslint .
+
+para ejecutar eslint sería
+# npx eslint --init
+
+(no sale en el video la opcion de to check syntax, find problems, and enforce code style, así que le he puesto las dependencias estas npx install-peerdeps --dev eslint-config-airbnb)
+
+me rindo con eslint, no sirve para nada y hay muchos archivos conflictivos
